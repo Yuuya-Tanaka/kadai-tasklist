@@ -28,6 +28,8 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
 
     config.cache_store = :null_store
+    
+    config.hosts.clear
   end
 
   # Don't care if the mailer can't send.
