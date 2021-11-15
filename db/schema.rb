@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_09_054726) do
+ActiveRecord::Schema.define(version: 2021_11_14_064852) do
 
   create_table "tasks", charset: "utf8mb4", force: :cascade do |t|
     t.string "content"
