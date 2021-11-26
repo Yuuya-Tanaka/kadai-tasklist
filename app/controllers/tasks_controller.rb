@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+  
   def index
     @pagy, @tasks = pagy(Task.order(id: :desc), items: 3)
   end
@@ -27,6 +28,7 @@ class TasksController < ApplicationController
   end
 
   def update
+    binding.pry
     if @task.update(task_params)
       flash[:success] = 'タスクが編集されました'
       redirect_to @task
