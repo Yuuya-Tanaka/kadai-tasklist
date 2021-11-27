@@ -28,7 +28,6 @@ class TasksController < ApplicationController
   end
 
   def update
-    binding.pry
     if @task.update(task_params)
       flash[:success] = 'タスクが編集されました'
       redirect_to @task
