@@ -1,8 +1,9 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :require_user_logged_in, only: [:index, :show]
   
   def index
-    @pagy, @tasks = pagy(Task.order(id: :desc), items: 3)
+      @pagy, @tasks = pagy(Task.order(id: :desc), items: 3)
   end
 
   def show
